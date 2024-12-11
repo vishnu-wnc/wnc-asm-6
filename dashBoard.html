@@ -1,14 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
 </head>
+
 <body>
     <header>
-        
+        <h2 id="family-name">Last Name</h2>
+        <h3>First Name, Age, Gender</h3>
     </header>
+    <main>
+        <div>
+            Family Members:
+            <ul id="family-list">
+
+            </ul>
+        </div>
+        <div>
+            <button id="add-member">Add Family Member</button>
+        </div>
+        <div>
+            <label for="member-name">Member Name</label>
+            <input type="text" id="member-name">
+            <label for="member-age">Member Age</label>
+            <input type="number" id="member-age">
+            <label for="member-gender">Member Gender</label>
+            <select id="member-gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+            <label for="member-relation">Relation</label>
+            <select id="member-relation">
+                <option>Please select a Relation</option>
+                <option value="Spouse">Spouse</option>
+                <option value="Child">Child</option>
+                <option value="Parent">Parent</option>
+                <option value="Sibling">Sibling</option>
+                <option value="Grandparent">Other</option>
+                <option value="Uncle">Uncle</option>
+                <option value="Aunty">Aunty</option>
+                <option value="Cousin">Cousin</option>
+                <option value="Grandchild">Grandchild</option>
+                <option value="Other">Other</option>
+            </select>
+            <button id="add-member" onclick="addMember()">Add Member</button>
+        </div>
+    </main>
     <script src="dashBoard.js"></script>
 </body>
+
 </html>

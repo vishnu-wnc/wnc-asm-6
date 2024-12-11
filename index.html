@@ -1,22 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Family Chart</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
         Family Portal Login
     </header>
     <main>
+
         <label>Name</label>
         <input id="first-name" type="text">
+
         <label>Family Name</label>
         <input id="family-name" type="text">
+
+        <label>Username</label>
+        <input id="username" type="text">
+
         <label>Date of Birth</label>
         <input id="age" type="date" value="2024-10-12">
+
         <label>Gender</label>
         <select id="gender-select">
             <option>Please select a Gender</option>
@@ -24,11 +33,13 @@
             <option value="Female">Female</option>
             <option value="Other">Other</option>
         </select>
+
         <a href="dashBoard.html">
-            <button onclick="initial()">Submit</button>
+            <button onclick="myFunction()">Submit</button>
         </a>
     </main>
 
     <script src="index.js"></script>
 </body>
+
 </html>
