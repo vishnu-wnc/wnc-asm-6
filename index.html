@@ -13,31 +13,27 @@
         <h2>Family Portal</h2>
     </header>
     <main>
-
         <label>Name</label><br>
-        <input id="first-name" type="text"><br>
+        <input id="first-name" type="text" required><br>
 
         <label>Family Name</label><br>
-        <input id="family-name" type="text"><br>
+        <input id="family-name" type="text" required><br>
 
         <label>Username</label><br>
-        <input id="username" type="text"><br>
+        <input id="username" type="text" required><br>
 
         <label>Date of Birth</label><br>
-        <input id="age" type="date" value="2024-10-12"><br>
+        <input id="dob" type="date" value="2024-10-12" required><br>
 
         <label>Gender</label><br>
-        <select id="gender-select">
+        <select id="gender-select" required>
             <option>Please select a Gender</option>
             <option value="Male">Male</option>
             <option value="Female">Female</option>
             <option value="Other">Other</option>
         </select><br>
         <br>
-
-        <a href="dashBoard.html">
-            <button onclick="myFunction()">Submit</button>
-        </a>
+        <button onclick="myFunction()">Submit</button>
     </main>
 
     <script src="index.js"></script>
