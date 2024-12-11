@@ -1,0 +1,30 @@
+#add-member-button{
+    position: absolute;
+    top: 20%;
+    right: 2%;
+}
+main{
+    display: flex;
+
+}
+
+#table-div{
+    width:50%;
+}
+
+#add-member-page{
+    width: 50%;
+}
+
+table{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
+
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
