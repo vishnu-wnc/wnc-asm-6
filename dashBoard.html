@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
+    <link rel="stylesheet" href="dashBoard.css">
 </head>
 
 <body>
@@ -13,43 +14,51 @@
         <h3>First Name, Age, Gender</h3>
     </header>
     <main>
-        <div>
+        <div id="table-div">
             Family Members:
-            <ul id="family-list">
+            <br><br>
+            <table id="family-table">
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                </tr>
+            </table>
+        </div>
+        <div id="add-member-page" style="visibility: hidden;">
 
-            </ul>
-        </div>
-        <div>
-            <button id="add-member">Add Family Member</button>
-        </div>
-        <div>
-            <label for="member-name">Member Name</label>
-            <input type="text" id="member-name">
-            <label for="member-age">Member Age</label>
-            <input type="number" id="member-age">
-            <label for="member-gender">Member Gender</label>
+            <label for="member-name">Member Name</label><br>
+            <input type="text" id="member-name"><br>
+
+            <label for="member-age">Member Age</label><br>
+            <input type="number" id="member-age"><br>
+
+            <label for="member-gender">Member Gender</label><br>
             <select id="member-gender">
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
                 <option value="Other">Other</option>
-            </select>
-            <label for="member-relation">Relation</label>
+            </select><br>
+
+            <label for="member-relation">Relation</label><br>
             <select id="member-relation">
                 <option>Please select a Relation</option>
                 <option value="Spouse">Spouse</option>
                 <option value="Child">Child</option>
                 <option value="Parent">Parent</option>
                 <option value="Sibling">Sibling</option>
-                <option value="Grandparent">Other</option>
+                <option value="Grandparent">Grandparent</option>
                 <option value="Uncle">Uncle</option>
                 <option value="Aunty">Aunty</option>
                 <option value="Cousin">Cousin</option>
                 <option value="Grandchild">Grandchild</option>
                 <option value="Other">Other</option>
-            </select>
-            <button id="add-member" onclick="addMember()">Add Member</button>
+            </select><br>
+
+            <button onclick="addMember()">Add Member</button>
+            <button onclick="closeAddWindow()">Close</button>
         </div>
     </main>
+    <button id="add-member-button" onclick="openAddWindow()">Add Family Member</button>
     <script src="dashBoard.js"></script>
 </body>
 
