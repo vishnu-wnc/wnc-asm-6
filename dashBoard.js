@@ -1,4 +1,3 @@
-
 /**
  * getting current user data from local storage
  */
@@ -6,18 +5,6 @@ const data = JSON.parse(localStorage.getItem(localStorage.getItem("default")));
 
 console.log(data);
 console.log(data.dob);
-
-/**
- * Getting age from date of birth and returning the age
- * @returns age 
- */
-function calculateAge() {
-    var today = new Date();
-    var birthDate = new Date(data.dob);
-    var age = today.getFullYear() - birthDate.getFullYear();
-    var m = today.getMonth() - birthDate.getMonth();
-    return age;
-}
 
 document.getElementsByTagName("h2")[0].innerHTML = data.familyName;
 document.getElementsByTagName("h3")[0].innerHTML = data.name + " " + data.gender + " " + calculateAge();
@@ -32,6 +19,18 @@ window.onload = function () {
     hoverRow();
 }
 
+
+/**
+ * Getting age from date of birth and returning the age
+ * @returns age 
+ */
+function calculateAge() {
+    var today = new Date();
+    var birthDate = new Date(data.dob);
+    var age = today.getFullYear() - birthDate.getFullYear();
+    var m = today.getMonth() - birthDate.getMonth();
+    return age;
+}
 
 /**
  * Adding rows after relogging or reloading
