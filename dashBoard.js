@@ -1,7 +1,16 @@
+
+/**
+ * getting current user data from local storage
+ */
 const data = JSON.parse(localStorage.getItem(localStorage.getItem("default")));
 
 console.log(data);
 console.log(data.dob);
+
+/**
+ * Getting age from date of birth and returning the age
+ * @returns age 
+ */
 function calculateAge() {
     var today = new Date();
     var birthDate = new Date(data.dob);
@@ -15,11 +24,18 @@ document.getElementsByTagName("h3")[0].innerHTML = data.name + " " + data.gender
 
 var table = document.getElementById("family-table");
 
+/**
+ * loading function
+ */
 window.onload = function () {
     rowAdder();
     hoverRow();
 }
 
+
+/**
+ * Adding rows after relogging or reloading
+ */
 function rowAdder() {
     for (let i = 0; i < data.relations.length; i++) {
         let row = table.insertRow(1);
@@ -72,7 +88,7 @@ function addMember() {
 
 function openAddWindow() {
     document.getElementById("add-member-page").style.visibility = "visible";
-    document.getElementById("add-member-button").style.visibility = "hidden"
+    document.getElementById("add-member-button").style.visibility = "hidden";
 }
 
 
@@ -85,6 +101,10 @@ function closeAddWindow() {
 }
 
 
+
+/**
+ * Hovering is handled here, on every row getting its index and showing their corresponding data in deatails div
+ */
 function hoverRow() {
     // var rows = document.getElementsByClassName("table-row");
     var rows = document.querySelectorAll(".table-row");
@@ -113,6 +133,10 @@ function hoverRow() {
     });
 }
 
+
+/**
+ * Redirecting to Login page
+ */
 function logout() {
     window.location.href = "index.html";
 }
