@@ -80,6 +80,9 @@ function addMember() {
 
     hoverRow();
     console.log(data.relations);
+    document.getElementById("member-name").value="";
+    document.getElementById("member-age").value="";
+
 }
 
 /**
@@ -140,3 +143,5 @@ function hoverRow() {
 function logout() {
     window.location.href = "index.html";
 }
+
+
