@@ -1,3 +1,8 @@
+
+/**
+ * Retrieving data from input field from login page and pushing them into local storage
+ * @returns null if any of field is empty
+ */
 function myFunction() {
     var fname = document.getElementById("first-name").value.toString();
     var familyName = document.getElementById("family-name").value.toString();
@@ -18,6 +23,10 @@ function myFunction() {
         "relations": [],
     }
     console.log(data);
+
+    /**
+     * If users is already present then doesnt change the previous relation
+     */
     if (localStorage.getItem(username) == null) {
         localStorage.setItem(username, JSON.stringify(data));
         localStorage.setItem("default", username);
